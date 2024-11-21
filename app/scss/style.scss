@@ -3,3 +3,55 @@
 @use 'reset' as *;
 @use 'global' as *;
 
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.menu {
+  margin-top: 35px;
+  display: flex;
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__list-item {
+    margin-right: 45px;
+  }
+  &__link {
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.logo {
+  margin-right: 185px;
+}
+
+.header {
+  &__content {
+    text-align: center;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__subtitle {
+    text-align: center;
+  }
+}
+
+
+@use 'media' as *;
