@@ -19,14 +19,17 @@ function browsersync() {
 
 function styles() {
   return src('app/scss/style.scss')
-  .pipe(scss({outputStyle: 'compressed'}))
-  .pipe(concat('style.min.css'))
-  .pipe(autoprefixer({
-    overrideBrowserslist: ['last 10 versions'],
-    grid: true
-  }))
-  .pipe(dest('app/css'))
-  .pipe(browserSync.stream())
+    .pipe(scss({ outputStyle: 'compressed' }).on('error', function(err) {
+      console.error('SCSS Error:', err.message); 
+      this.emit('end'); 
+    }))
+    .pipe(concat('style.min.css'))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 versions'],
+      grid: true
+    }))
+    .pipe(dest('app/css'))
+    .pipe(browserSync.stream());
 }
 
 function scripts() {

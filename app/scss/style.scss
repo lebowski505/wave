@@ -2,6 +2,9 @@
 @use 'fonts' as *;
 @use 'reset' as *;
 @use 'global' as *;
+@use 'media' as *;
+
+
 
 .header {
   width: 100%;
@@ -10,30 +13,47 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+  }
+  &__button {
+    margin-bottom: 92px;
+  }
 }
 
-.header__inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+.header__content {
+  text-align: center;
+  &-title {
+    font-size: 200px;
+    line-height: 235px;
+    color: #0d302c;
+    @extend %quicksand-600;
+  }
+  &-subtitle {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #000;
+  }
 }
 
-.menu {
-  margin-top: 35px;
-  display: flex;
+
+.header-menu {
+  margin-top: 30px;
   &__list {
     display: flex;
     align-items: center;
   }
-  &__list-item {
-    margin-right: 45px;
-  }
   &__link {
     font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.03em;
     color: #fff;
-    text-transform: uppercase;
+    margin-right: 45px;
   }
 }
 
@@ -41,17 +61,4 @@
   margin-right: 185px;
 }
 
-.header {
-  &__content {
-    text-align: center;
-  }
-  &__title {
-    text-align: center;
-  }
-  &__subtitle {
-    text-align: center;
-  }
-}
 
-
-@use 'media' as *;

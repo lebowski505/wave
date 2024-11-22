@@ -1,8 +1,10 @@
+@use 'vars' as *;
+
 body    {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.04em;
-  color: $default;
+  color: $basic;
   @extend %roboto-400;
 }
 
