@@ -1,7 +1,12 @@
 $basic: #242121;
-$title: #0d302c;
+$title: #01353e;
+$bg: #f8f8f8;
 
 
+%roboto-300 {
+  font-family: 'Roboto-Light', sans-serif;
+  font-weight: 300;
+} 
 %roboto-400 {
   font-family: 'Roboto-Regular', sans-serif;
   font-weight: 400;

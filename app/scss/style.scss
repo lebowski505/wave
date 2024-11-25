@@ -61,4 +61,86 @@
   margin-right: 185px;
 }
 
+.title {
+  font-size: 48px;
+  line-height: 56px;
+  @extend %quicksand-600;
+  text-transform: uppercase;
+  text-align: center;
+  color: $title;
+  display: flex;
+  justify-content: center;
+  &::after {
+      content: "\002F";
+      font-size: 72px;
+      line-height: 85px;
+      letter-spacing: 0.01em;
+      font-stretch: normal;
+      color: #00b2a0;
+      margin: 10px 0;
+      transform: scaleX(1.2);
+    }
+}
+
+.info {
+  padding: 190px 0 200px;
+  &__title {
+    margin-bottom: 65px;
+  }
+  &__text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__text-item {
+    width: 480px;
+    margin-bottom: 30px;
+  }
+}
+
+.school {
+  padding: 200px 0 200px;
+  background-color: $bg;
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.school__item {
+  &-title {
+    font-size: 24px;
+    line-height: 28px;
+    @extend %roboto-400;
+    text-align: center;
+    position: relative;
+    margin: -4px 50px 23px;
+    flex: 1; 
+    max-width: 300px; 
+    margin: 0 10px; 
+  }
+  &-title--sun::before{
+    background-image: url(../images/school/1.svg);
+  }
+  &-title--plane::before{
+    background-image: url(../images/school/2.svg);
+  }
+  &-title--surf::before{
+    background-image: url(../images/school/3.svg);
+  }
+  &-title::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+  }
+  &-text {
+    max-width: 350px;
+  }
+}
 
