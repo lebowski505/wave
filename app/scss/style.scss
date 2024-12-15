@@ -5,7 +5,6 @@
 @use 'media' as *;
 
 
-
 .header {
   width: 100%;
   min-height: 100vh;
@@ -25,15 +24,15 @@
   }
 }
 
-.header__content {
+.header-content {
   text-align: center;
-  &-title {
+  &__title {
     font-size: 200px;
     line-height: 235px;
     color: #0d302c;
-    @extend %quicksand-600;
+    @extend %raleway-600;
   }
-  &-subtitle {
+  &__subtitle {
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.03em;
@@ -61,27 +60,6 @@
   margin-right: 185px;
 }
 
-.title {
-  font-size: 48px;
-  line-height: 56px;
-  @extend %quicksand-600;
-  text-transform: uppercase;
-  text-align: center;
-  color: $title;
-  display: flex;
-  justify-content: center;
-  &::after {
-      content: "\002F";
-      font-size: 72px;
-      line-height: 85px;
-      letter-spacing: 0.01em;
-      font-stretch: normal;
-      color: #00b2a0;
-      margin: 10px 0;
-      transform: scaleX(1.2);
-    }
-}
-
 .info {
   padding: 190px 0 200px;
   &__title {
@@ -106,31 +84,38 @@
   &__items {
     display: flex;
     justify-content: space-between;
-  }
-}
-
-.school__item {
-  &-title {
+    margin-bottom: 100px;
+  } 
+  &__item-title {
     font-size: 24px;
     line-height: 28px;
     @extend %roboto-400;
     text-align: center;
     position: relative;
-    margin: -4px 50px 23px;
+    margin-left: 50px;
     flex: 1; 
     max-width: 300px; 
-    margin: 0 10px; 
   }
-  &-title--sun::before{
-    background-image: url(../images/school/1.svg);
+  &__item-title--sun {
+    padding-top: 12px;
+    margin-bottom: 35px;
+    &::before{
+      background-image: url(../images/school/1.svg);
+    }
   }
-  &-title--plane::before{
-    background-image: url(../images/school/2.svg);
+  &__item-title--plane {
+    margin-bottom: 20px;
+    &::before{
+      background-image: url(../images/school/2.svg);
+    }
   }
-  &-title--surf::before{
-    background-image: url(../images/school/3.svg);
+  &__item-title--surf {
+    margin-bottom: 20px;
+    &::before{
+      background-image: url(../images/school/3.svg);
+    }
   }
-  &-title::before {
+  &__item-title::before {
     content: "";
     position: absolute;
     right: 0;
@@ -139,8 +124,59 @@
     height: 50px;
     width: 50px;
   }
-  &-text {
+  &__item-text {
     max-width: 350px;
   }
 }
 
+.school-bottom {
+  display: flex;
+  justify-content: space-between;
+  &__snake {
+    margin-top: 5px;
+  }
+  &__snake-item {
+    position: relative;
+    margin-bottom: 15px;
+    span {
+      font-size: 24px;
+      line-height: 18px;
+      position: absolute;
+      margin-left: 10px;
+      top: -5px;
+    }
+  }
+  &__snake-img {
+    width: 295px;
+  }
+  &__text {
+    p{
+     width: 600px;
+     &:first-child {
+       margin-bottom: 30px;
+     }
+   }
+  }
+}
+
+.study {
+  padding: 200px 0 350px;
+  background-image: url('../images/study-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right top;
+    &__inner {
+      max-width: 100%;
+    }
+    &__title {
+    justify-content: start;
+    margin-bottom: 70px;
+    }
+    &__text {
+      width: 507px;
+      margin-bottom: 30px;
+      &:last-child {
+      margin-bottom: 0;
+      }
+    }
+}

@@ -13,3 +13,22 @@ body    {
   padding: 0 10px;
   margin: 0 auto; 
 }
+
+.title {
+  font-size: 48px;
+  line-height: 56px;
+  @extend %raleway-600;
+  text-transform: uppercase;
+  color: $title;
+  display: flex;
+  justify-content: center;
+  &::after {
+      content: "/";
+      font-size: 72px;
+      line-height: 85px;
+      letter-spacing: 0.01em;
+      font-stretch: normal;
+      color: #00b2a0;
+      margin-top: 5px;
+    }
+}
