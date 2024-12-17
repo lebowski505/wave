@@ -19,7 +19,7 @@
     height: 100vh;
     align-items: center;
   }
-  &__button {
+  &__button-link {
     margin-bottom: 92px;
   }
 }
@@ -29,14 +29,15 @@
   &__title {
     font-size: 200px;
     line-height: 235px;
-    color: #0d302c;
+    color: $basic;
     @extend %raleway-600;
   }
   &__subtitle {
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.03em;
-    color: #000;
+    color: $basic;
+    padding-bottom: 300px;
   }
 }
 
@@ -45,19 +46,17 @@
   margin-top: 30px;
   &__list {
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
   &__link {
+    display: flex;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.03em;
-    color: #fff;
+    color: $title;
     margin-right: 45px;
   }
-}
-
-.logo {
-  margin-right: 185px;
 }
 
 .info {
@@ -92,28 +91,9 @@
     @extend %roboto-400;
     text-align: center;
     position: relative;
-    margin-left: 50px;
+    margin-left: 56px;
     flex: 1; 
-    max-width: 300px; 
-  }
-  &__item-title--sun {
-    padding-top: 12px;
-    margin-bottom: 35px;
-    &::before{
-      background-image: url(../images/school/1.svg);
-    }
-  }
-  &__item-title--plane {
-    margin-bottom: 20px;
-    &::before{
-      background-image: url(../images/school/2.svg);
-    }
-  }
-  &__item-title--surf {
-    margin-bottom: 20px;
-    &::before{
-      background-image: url(../images/school/3.svg);
-    }
+    max-width: 312px; 
   }
   &__item-title::before {
     content: "";
@@ -124,6 +104,29 @@
     height: 50px;
     width: 50px;
   }
+  &__item-title--house {
+    padding-top: 12px;
+    margin-bottom: 35px;
+    &::before{
+      background-image: url(../images/school/house-solid.svg);
+      width: 56px;
+    }
+  }
+  &__item-title--person {
+    margin-bottom: 20px;
+    &::before{
+      background-image: url(../images/school/person-solid.svg);
+      height: 50px;
+      width: 38px;
+    }
+  }
+  &__item-title--shield {
+    padding-top: 12px;
+    margin-bottom: 35px;
+    &::before{
+      background-image: url(../images/school/shield-solid.svg);
+    }
+  }
   &__item-text {
     max-width: 350px;
   }
@@ -133,11 +136,11 @@
   display: flex;
   justify-content: space-between;
   &__snake {
-    margin-top: 5px;
+    margin-top: 60px;
   }
   &__snake-item {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     span {
       font-size: 24px;
       line-height: 18px;
@@ -149,13 +152,30 @@
   &__snake-img {
     width: 295px;
   }
-  &__text {
-    p{
-     width: 600px;
-     &:first-child {
-       margin-bottom: 30px;
-     }
-   }
+  &__content {
+    width: 500px;
+  }
+  &__content-title {
+    font-size: 25px;
+    line-height: 28px;
+    @extend %raleway-600;
+    text-transform: uppercase;
+    color: $title;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  &__content-list {
+    li {
+      color: #DED3A6;
+      margin-bottom: 20px;
+    }
+    li span {
+      color: $basic;
+    }
+  }
+  ul.school-bottom__content-list {
+    list-style: square;
   }
 }
 
@@ -163,7 +183,7 @@
   padding: 200px 0 350px;
   background-image: url('../images/study-bg.jpg');
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 45%;
   background-position: right top;
     &__inner {
       max-width: 100%;

@@ -22,13 +22,11 @@ body    {
   color: $title;
   display: flex;
   justify-content: center;
-  &::after {
-      content: "/";
-      font-size: 72px;
+  &::before {
+      content: ">";
+      font-size: 92px;
       line-height: 85px;
       letter-spacing: 0.01em;
-      font-stretch: normal;
-      color: #00b2a0;
-      margin-top: 5px;
+      color: $accent;
     }
 }
