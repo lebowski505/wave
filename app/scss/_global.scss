@@ -20,13 +20,12 @@ body    {
   @extend %raleway-600;
   text-transform: uppercase;
   color: $title;
-  display: flex;
-  justify-content: center;
   &::before {
-      content: ">";
-      font-size: 92px;
-      line-height: 85px;
-      letter-spacing: 0.01em;
+      content: "[";
+      color: $accent;
+    }
+  &::after {
+      content: "]";
       color: $accent;
     }
 }
